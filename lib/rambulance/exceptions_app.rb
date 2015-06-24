@@ -8,8 +8,8 @@ module Rambulance
   end.invert
 
   class ExceptionsApp < ActionController::Base
-    include ApplicationHelper
     layout :layout_name
+    helper :application_helper
 
     BAD_REQUEST_EXCEPTION = begin
                               ActionController::BadRequest
